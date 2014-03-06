@@ -43,12 +43,16 @@
     <p id="deviceProperties">Loading device properties...</p>
 
 <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+<BR><BR>
+<p><div id=button>Show Alert 2</div></p>
 
 
 
 
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.fastclick.js"></script>
         <script type="text/javascript">
            //app.initialize();
       
@@ -88,6 +92,12 @@
         );
     }
 
+
+$( document ).ready(function() {
+   /////////////
+	$('#button').fastClick(function() {showAlert();});
+   ////////////
+});
 
     </script>
 
