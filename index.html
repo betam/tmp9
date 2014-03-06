@@ -151,6 +151,7 @@
     // device APIs are available
     //
     function onDeviceReady() {
+	navigator.splashscreen.hide();
         var element = document.getElementById('deviceProperties');
         element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
                             'Device Cordova: '  + device.cordova  + '<br />' +
