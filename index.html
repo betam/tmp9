@@ -42,6 +42,9 @@
 
     <p id="deviceProperties">Loading device properties...</p>
 
+<p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+
+
 
 
         <script type="text/javascript" src="phonegap.js"></script>
@@ -64,6 +67,27 @@
                             'Device UUID: '     + device.uuid     + '<br />' +
                             'Device Version: '  + device.version  + '<br />';
     }
+
+
+///////////////
+
+
+    // alert dialog dismissed
+        function alertDismissed() {
+            // do something
+        }
+
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
 
     </script>
 
